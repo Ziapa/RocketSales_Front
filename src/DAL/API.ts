@@ -13,5 +13,25 @@ export const instance = axios.create({
 export const leadsAPI = {
     getLeads() {
         return instance.get("leads")
-    }
+    },
+
+    getLead(id:string) {
+        return instance.get(`leads/${id}`)
+    },
+
+    getContacts () {
+        return instance.get("contacts")
+    },
+
+    getContact (id: number) {
+        return instance.get(`contacts/${id}`)
+    },
+
+    getPipelines () {
+        return instance.get("pipelines")
+    },
+
+    getStatuses (id: number) {
+        return instance.get(`statuses/${id}`)
+    },
 }
