@@ -1,6 +1,6 @@
-import {LeadsActionsType, LeadsActionTypes, LeadsStateType} from "../../types/typesLeads";
+import {LeadsActionsType, LeadsActionTypes, DealsStateType} from "../../types/typesLeads";
 
-const leadsInitialState: LeadsStateType = {
+const leadsInitialState: DealsStateType = {
     leads: [],
     statuses: [],
     contacts: [],
@@ -8,7 +8,7 @@ const leadsInitialState: LeadsStateType = {
     error: null
 }
 
-export const leadsReducer = (state = leadsInitialState, action: LeadsActionsType): LeadsStateType => {
+export const leadsReducer = (state = leadsInitialState, action: LeadsActionsType): DealsStateType => {
     switch (action.type) {
         case LeadsActionTypes.FETCH_USERS:
             return {...state, loading: true, error: null}

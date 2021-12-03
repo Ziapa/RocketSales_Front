@@ -34,4 +34,8 @@ export const leadsAPI = {
     getStatuses (id: number) {
         return instance.get(`statuses/${id}`)
     },
+
+    getStatus (id: number, pipeline_id: number) {
+        return instance.get(`pipelines/${pipeline_id}/statuses/${id}`)
+    },
 }

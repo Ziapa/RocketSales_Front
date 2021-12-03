@@ -1,11 +1,66 @@
-
-
-export type LeadsStateType = {
-    leads: any [],
-    statuses: Array<any>,
-    contacts: Array<any>,
+export type DealsStateType = {
+    leads: Array<TypesLeads>,
+    statuses: Array<StatusesType>,
+    contacts: Array<UsersType>,
     loading: boolean,
     error: null | string
+}
+
+export type TypesLeads = {
+    account_id: number
+    closed_at: null
+    closest_task_at: null
+    created_at: number
+    created_by: number
+    custom_fields_values: null
+    group_id: number
+    id: number
+    is_deleted: boolean
+    loss_reason_id: null
+    name: string
+    pipeline_id: number
+    price: number
+    responsible_user_id: number
+    score: null
+    status_id: number
+    updated_at: number
+    updated_by: number
+    _embedded: {
+        tags: Array<TagsType>
+    }
+}
+
+export type TagsType = {
+    id: number
+    name: string
+}
+
+export type StatusesType = {
+    account_id: number
+    color: string
+    id: number
+    is_editable: boolean
+    name: string
+    pipeline_id: number
+    sort: number
+    type: number
+}
+
+export type UsersType = {
+    account_id: number
+    closest_task_at: null
+    created_at: number
+    created_by: number
+    first_name: string
+    group_id: number
+    id: number
+    is_deleted: boolean
+    is_unsorted: boolean
+    last_name: string
+    name: string
+    responsible_user_id: number
+    updated_at: number
+    updated_by: number
 }
 
 export enum LeadsActionTypes {
@@ -36,5 +91,10 @@ type FetchLeadsErrorAction = {
     payload: string
 }
 
-export type  LeadsActionsType = FetchLeadsAction | FetchLeadsSuccessAction | FetchLeadsErrorAction | FetchStatusesSuccessAction | FetchContactsSuccessAction
+export type  LeadsActionsType =
+    FetchLeadsAction
+    | FetchLeadsSuccessAction
+    | FetchLeadsErrorAction
+    | FetchStatusesSuccessAction
+    | FetchContactsSuccessAction
 
