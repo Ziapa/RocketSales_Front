@@ -26,6 +26,7 @@ export const searchLeads = (id: string) => {
             dispatch({type: LeadsActionTypes.FETCH_USERS})
             const responseSearch = await leadsAPI.getLead(id)
             dispatch({type: LeadsActionTypes.FETCH_LEADS_SUCCESS, payload: responseSearch.data._embedded.leads})
+            debugger
         } catch (e) {
             dispatch({type: LeadsActionTypes.FETCH_USERS_ERROR,payload: "Произошла ошибка при поиске данных"})
         }

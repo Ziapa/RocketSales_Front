@@ -13,7 +13,7 @@ export const leadsReducer = (state = leadsInitialState, action: LeadsActionsType
         case LeadsActionTypes.FETCH_USERS:
             return {...state, loading: true, error: null}
         case LeadsActionTypes.FETCH_LEADS_SUCCESS:
-            return {...state, error: null, leads: action.payload}
+            return {...state, loading: false, error: null, leads: action.payload}
         case LeadsActionTypes.FETCH_STATUSES_SUCCESS:
             return {...state, error: null, statuses: action.payload}
         case LeadsActionTypes.FETCH_CONTACTS_SUCCESS:

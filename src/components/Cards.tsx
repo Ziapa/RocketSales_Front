@@ -1,7 +1,6 @@
 import React from "react";
 import {Card} from "antd";
 import s from "./Cards.module.css"
-import moment from "moment";
 import { TagsType } from "../types/typesLeads";
 
 type CardType = {
@@ -15,7 +14,7 @@ type CardType = {
 
 export const Cards = (props: CardType) => {
     
-    const createDate = moment(props.created_at).locale("ru").format('D.MM.YYYY');
+    const createDate = new Date(props.created_at * 1000)
 
     return (
 
@@ -26,7 +25,7 @@ export const Cards = (props: CardType) => {
                 <div  >{props.tags.map(el => <span key={el.id} style={{ marginLeft: "5px", backgroundColor: "gray"}}>{el.name}</span> )}</div>
                 <p style={{backgroundColor: `${props.status.color}`}}> {props.status.name} </p>
                 <p>{props.responsibleUser}</p>
-                <p>{createDate}</p>
+                <p>{`${createDate.getDay()}.${createDate.getMonth()}.${createDate.getFullYear()}`}</p>
                 <p>{props.price}</p>
             </Card>
 

@@ -12,6 +12,16 @@ function App() {
 
     const dispatch = useDispatch()
 
+    const [value, setValue] = useState("")
+
+    useEffect(()=>{
+        if(value.length > 3){
+            dispatch(searchLeads(value))
+        } if  (value.length === 0) {
+            dispatch(fetchLeads())
+        }
+    },[value, dispatch])
+
     useEffect(() => {
         dispatch(fetchLeads())
     }, [dispatch])
@@ -38,17 +48,13 @@ function App() {
         return {id: 999, name: "string"}
     }
 
-    const [value, setValue] = useState("")
+
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
     }
 
-    useEffect(()=>{
-        if(value.length > 3){
-            dispatch(searchLeads(value))
-        }
-    },[value])
+
 
     return (
         <div className={s.app}>
