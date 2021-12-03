@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/RocketSales_Front/static/css/main.08ee6bcf.chunk.css",
-    "main.js": "/RocketSales_Front/static/js/main.b2cdd499.chunk.js",
-    "main.js.map": "/RocketSales_Front/static/js/main.b2cdd499.chunk.js.map",
+    "main.css": "/RocketSales_Front/static/css/main.78801fa0.chunk.css",
+    "main.js": "/RocketSales_Front/static/js/main.f8d60235.chunk.js",
+    "main.js.map": "/RocketSales_Front/static/js/main.f8d60235.chunk.js.map",
     "runtime-main.js": "/RocketSales_Front/static/js/runtime-main.afb19d26.js",
     "runtime-main.js.map": "/RocketSales_Front/static/js/runtime-main.afb19d26.js.map",
-    "static/js/2.15715987.chunk.js": "/RocketSales_Front/static/js/2.15715987.chunk.js",
-    "static/js/2.15715987.chunk.js.map": "/RocketSales_Front/static/js/2.15715987.chunk.js.map",
+    "static/js/2.d6f9dd04.chunk.js": "/RocketSales_Front/static/js/2.d6f9dd04.chunk.js",
+    "static/js/2.d6f9dd04.chunk.js.map": "/RocketSales_Front/static/js/2.d6f9dd04.chunk.js.map",
     "index.html": "/RocketSales_Front/index.html",
-    "static/css/main.08ee6bcf.chunk.css.map": "/RocketSales_Front/static/css/main.08ee6bcf.chunk.css.map",
-    "static/js/2.15715987.chunk.js.LICENSE.txt": "/RocketSales_Front/static/js/2.15715987.chunk.js.LICENSE.txt"
+    "static/css/main.78801fa0.chunk.css.map": "/RocketSales_Front/static/css/main.78801fa0.chunk.css.map",
+    "static/js/2.d6f9dd04.chunk.js.LICENSE.txt": "/RocketSales_Front/static/js/2.d6f9dd04.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.afb19d26.js",
-    "static/js/2.15715987.chunk.js",
-    "static/css/main.08ee6bcf.chunk.css",
-    "static/js/main.b2cdd499.chunk.js"
+    "static/js/2.d6f9dd04.chunk.js",
+    "static/css/main.78801fa0.chunk.css",
+    "static/js/main.f8d60235.chunk.js"
   ]
 }
