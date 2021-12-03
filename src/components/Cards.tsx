@@ -23,7 +23,7 @@ export const Cards = (props: CardType) => {
             <Card
                 title={props.name}
                 style={{width: 300}}>
-                <div  >{props.tags.map(el => <span style={{ marginLeft: "5px", backgroundColor: "gray"}}>{el.name}</span> )}</div>
+                <div  >{props.tags.map(el => <span key={el.id} style={{ marginLeft: "5px", backgroundColor: "gray"}}>{el.name}</span> )}</div>
                 <p style={{backgroundColor: `${props.status.color}`}}> {props.status.name} </p>
                 <p>{props.responsibleUser}</p>
                 <p>{createDate}</p>
